@@ -13,11 +13,13 @@
   --fw-bold: 900;
   --clr-light: #fff;
   --clr-dark: #303030;
-  --clr-accent: #16e0bd;
+  --clr-accent: #808bdf;
   --fs-h1: 3rem;
   --fs-h2: 2.25rem;
   --fs-h3: 1.25rem;
   --fs-body: 1rem;
+  --bs: 0.25em 0.25em 0.75em rgba(0,0,0,.25),
+          0.125em 0.125em 0.25em rgba(0,0,0,.15);
 }
 
 @media (min-width: 800px) {
@@ -39,6 +41,10 @@ body {
   line-height: 1.6;
 }
 
+section {
+  padding: 5em 2em;
+}
+
 img {
   display: block;
   max-width: 100%;
@@ -52,7 +58,7 @@ strong {
 h1,
 h2,
 h3 {
-  line-height: 1.1;
+  line-height: 1;
   margin: 0;
 }
 
@@ -88,13 +94,70 @@ h3 {
 .section__subtitle--intro,
 .section__subtitle--about {
   background: var(--clr-accent);
+  padding: .25em 1em;
   font-family: var(--ff-secondary);
+  margin-bottom: 1em;
+}
+
+/* header */
+nav {
+  display: none;
+}
+
+/*  Intro section  */
+.intro {
+  position: relative;
+}
+
+.intro__img {
+  -webkit-box-shadow: var(--bs);
+          box-shadow: var(--bs);
+}
+
+.section__subtitle--intro {
+  display: inline-block;
+}
+
+@media (min-width: 600px) {
+  .intro {
+    display: -ms-grid;
+    display: grid;
+    width: -webkit-min-content;
+    width: -moz-min-content;
+    width: min-content;
+    margin: 0 auto;
+    grid-column-gap: 1em;
+        grid-template-areas: "img title" "img subtitle";
+    -ms-grid-columns: min-content max-content;
+        grid-template-columns: -webkit-min-content -webkit-max-content;
+        grid-template-columns: min-content max-content;
+  }
+  .intro__img {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 1;
+    grid-area: img;
+    min-width: 250px;
+    position: relative;
+    z-index: 2;
+  }
+  .section__subtitle--intro {
+    -ms-flex-item-align: start;
+        -ms-grid-row-align: start;
+        align-self: start;
+    grid-column: -1 / 1;
+    -ms-grid-row: 2;
+    grid-row: 2;
+    text-align: right;
+    position: relative;
+    left: -1.5em;
+    width: calc(100% + 1.5em);
+  }
 }
 
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  line-height: 1.5;
   font-family: 'Open Sans', sans-serif;
 }
 
