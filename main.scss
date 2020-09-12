@@ -1,10 +1,26 @@
+@font-face {
+	font-family: 'Collegia';
+	src: url('fonts/COLLEGIA.ttf');
+	src:
+		local('COLLEGIA'),
+		local('Collegia'),
+		url('fonts/COLLEGIA.ttf')
+		format('truetype');
+}
+
 *,
 *::before,
 *::after {
     box-sizing: border-box;
 }
 
-/* Custom Properties, update these for your own design */
+
+body {
+  box-sizing: border-box;
+}
+
+
+/* Custom Properties*/
 
 :root {
     --ff-primary: 'Source Sans Pro', sans-serif;
@@ -15,8 +31,7 @@
 
     --clr-light: #fff;
     --clr-dark: #303030;
-    // --clr-accent: #16e0bd;
-    --clr-accent: #808bdf;
+    --clr-accent: #58649f;
 
     --fs-h1: 3rem;
     --fs-h2: 2.25rem;
@@ -58,6 +73,31 @@ img {
 
 strong { font-weight: var(--fw-bold) }
 
+:focus {
+    outline: 3px solid var(--clr-accent);
+    outline-offset: 3px;
+}
+
+/* Buttons */
+
+.btn {
+    display: inline-block;
+    padding: .5em 2.5em;
+    background: var(--clr-accent);
+    color: var(--clr-dark);
+    text-decoration: none;
+    cursor: pointer;
+    font-size: .8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: var(--fw-bold);
+    transition: transform 200ms ease-in-out;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+}
+
 /* Typography */
 
 h1,
@@ -67,9 +107,9 @@ h3 {
     margin: 0;
 }
 
-h1 { font-size: var(--fs-h1) }
-h2 { font-size: var(--fs-h2) }
-h3 { font-size: var(--fs-h3) }
+// h1 { font-size: var(--fs-h1) }
+// h2 { font-size: var(--fs-h2) }
+// h3 { font-size: var(--fs-h3) }
 
 
 .section__title {
@@ -148,6 +188,76 @@ nav { display: none; }
 
 
 
+/*  My services section  */
+
+.my-services {
+    background-color: var(--clr-dark);
+    background-image: url(../img/services-bg.jpg);
+    background-size: cover;
+    color: var(--clr-light);
+    text-align: center;
+}
+
+.section__title--services {
+    color: var(--clr-light);
+    position: relative;
+}
+
+.section__title--services::after {
+    content: '';
+    display: block;
+    width: 2em;
+    height: 1px;
+    margin: 0.5em auto 1em;
+    background: var(--clr-light);
+    opacity: 0.25;
+}
+
+.services {
+    margin-bottom: 4em;
+}
+
+// .service {
+//     max-width: 500px;
+//     margin: 0 auto;
+// }
+
+@media (min-width: 800px) {
+    .services {
+        display: flex;
+        //max-width: 1000px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .service + .service {
+        margin-left: 2em;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // =========================================================================
 
@@ -179,13 +289,14 @@ img {
   position: relative;
   background: #333;
   width: 400px;
-  height: 75vh;
+  // height: 80vh;
   border-radius: 6px;
   padding: 2rem;
   color: #aaa;
   box-shadow: 0 .25rem .25rem rgba(0,0,0,0.2),
     0 0 1rem rgba(0,0,0,0.2);
   overflow: hidden;
+  margin-bottom: 1rem;
 
   &__image-container {
     margin: -2rem -2rem 1rem -2rem;
@@ -222,6 +333,29 @@ img {
     left: 0;
     top: 116px;
   }
+  &__links{
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
+
+.devicon-github-plain-wordmark {
+  display: inline-block;
+  font-size: 2em;
+}
+.fa-eye{
+  display: inline-block;
+  font-size: 1.5em;
+
+}
+
+.fa-eye span {
+  display: block;
+  font-size: .5em;
+  line-height: .8em;
+  font-family: 'Collegia';;
+
 }
 
 
