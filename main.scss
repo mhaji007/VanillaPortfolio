@@ -17,6 +17,8 @@
 
 body {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 
@@ -61,6 +63,11 @@ body {
     font-size: var(--fs-body);
     line-height: 1.6;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
 
 section {
     padding: 5em 2em;
@@ -205,6 +212,28 @@ header {
   z-index: 1000;
 }
 
+.nav-open .nav {
+  transform: translateX(0);
+}
+
+.nav-open .nav-toggle {
+  position: fixed;
+}
+
+.nav-open .hamburger {
+  transform: rotate(.625turn);
+}
+
+.nav-open .hamburger::before {
+  transform: rotate(90deg) translateX(-6px);
+}
+
+.nav-open .hamburger::after {
+  opacity: 0;
+}
+
+
+
 .hamburger {
   display: block;
   position: relative;
@@ -235,23 +264,23 @@ header {
 /*  Intro section  */
 
 .intro {
-    position: relative;
+  position: relative;
 }
 
 .intro__img {
-    box-shadow: var(--bs);
+  box-shadow: var(--bs);
 }
 
 .section__subtitle--intro {
-    display: inline-block;
+  display: inline-block;
 }
 
 @media (min-width: 600px) {
-    .intro {
-        display: grid;
-        width: min-content;
-        margin: 0 auto;
-        grid-column-gap: 1em;
+  .intro {
+    display: grid;
+    width: min-content;
+    margin: 0 auto;
+    grid-column-gap: 1em;
         grid-template-areas:
             "img title"
             "img subtitle";
@@ -323,14 +352,17 @@ header {
         margin-right: auto;
     }
 
-    .service + .service {
-        margin-left: 2em;
-    }
+    // .service + .service {
+    //     margin-left: 2em;
+    // }
 }
+
+
 
 .about-me {
   max-width: 1000px;
   margin: 0 auto;
+  // text-align: center;
 }
 
 .about-me__img {
@@ -362,12 +394,23 @@ header {
       padding-left: 1em;
       padding-right: calc(200px + 4em);
 
-  }
+    }
 
-  .about-me__img {
+    .about-me__img {
       grid-area: img;
       position: relative;
       z-index: 2;
+    }
+  }
+
+  @media (max-width: 600px) {
+    section {
+      min-width: 400px;
+    }
+    .card {
+      margin-left: 2em;
+      margin-right: 2em;
+
   }
 }
 
@@ -466,6 +509,8 @@ header {
 
 
 
+
+
 // =========================================================================
 
 * {
@@ -478,7 +523,12 @@ img {
   max-width: 100%;
 }
 
+.my-services{
+
+}
+
 .services {
+  // width: 100%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -486,9 +536,9 @@ img {
 }
 .container {
 
-  // align-items: center;
-  // justify-content: center;
-  // height: 100vh;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
 
 }
 

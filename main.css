@@ -14,6 +14,8 @@
 body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 /* Custom Properties*/
@@ -50,6 +52,10 @@ body {
   font-family: var(--ff-primary);
   font-size: var(--fs-body);
   line-height: 1.6;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 section {
@@ -206,6 +212,29 @@ header {
   z-index: 1000;
 }
 
+.nav-open .nav {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.nav-open .nav-toggle {
+  position: fixed;
+}
+
+.nav-open .hamburger {
+  -webkit-transform: rotate(0.625turn);
+          transform: rotate(0.625turn);
+}
+
+.nav-open .hamburger::before {
+  -webkit-transform: rotate(90deg) translateX(-6px);
+          transform: rotate(90deg) translateX(-6px);
+}
+
+.nav-open .hamburger::after {
+  opacity: 0;
+}
+
 .hamburger {
   display: block;
   position: relative;
@@ -330,9 +359,6 @@ header {
     margin-left: auto;
     margin-right: auto;
   }
-  .service + .service {
-    margin-left: 2em;
-  }
 }
 
 .about-me {
@@ -376,6 +402,16 @@ header {
     grid-area: img;
     position: relative;
     z-index: 2;
+  }
+}
+
+@media (max-width: 600px) {
+  section {
+    min-width: 400px;
+  }
+  .card {
+    margin-left: 2em;
+    margin-right: 2em;
   }
 }
 
@@ -479,6 +515,16 @@ img {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+}
+
+.container {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100vh;
 }
 
 .card {
