@@ -538,11 +538,34 @@ header {
 
 
 
-// @media (max-width: 453px){
-//   .nav-toggle {
-//     position: fixed;
-//   }
-// }
+@media (max-width: 400px){
+  .card {
+    border: .3em solid var(--clr-accent);
+
+  }
+  .card__svg {
+    visibility: hidden;
+  }
+  .card__title {
+    padding-top: 1em;
+
+  }
+  .intro {
+    padding-left: .5em;
+    padding-right: .5em;
+  }
+
+  // .intro__img {
+  //   object-fit: cover;
+  // }
+  .about-me {
+    padding-left: .5em;
+    padding-right: .5em;
+    // margin: 0 auto;
+  }
+
+
+}
 
 
 

@@ -529,6 +529,26 @@ header {
   padding: .5em;
 }
 
+@media (max-width: 400px) {
+  .card {
+    border: 0.3em solid var(--clr-accent);
+  }
+  .card__svg {
+    visibility: hidden;
+  }
+  .card__title {
+    padding-top: 1em;
+  }
+  .intro {
+    padding-left: .5em;
+    padding-right: .5em;
+  }
+  .about-me {
+    padding-left: .5em;
+    padding-right: .5em;
+  }
+}
+
 * {
   font-family: 'Open Sans', sans-serif;
 }
