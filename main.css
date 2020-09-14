@@ -529,12 +529,6 @@ header {
   padding: .5em;
 }
 
-@media (max-width: 453px) {
-  .nav-toggle {
-    position: fixed;
-  }
-}
-
 * {
   font-family: 'Open Sans', sans-serif;
 }
