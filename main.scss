@@ -243,6 +243,7 @@ header {
 .hamburger {
   display: block;
   position: relative;
+
 }
 
 .hamburger,
@@ -411,7 +412,7 @@ header {
 
   @media (max-width: 600px) {
     section {
-      min-width: 400px;
+      min-width: 410px;
     }
     .card {
       margin-left: 2em;
@@ -455,8 +456,8 @@ header {
   background-color: var(--clr-light);
   color: var(--clr-dark);
   text-align: center;
-  margin: 0 7.975em;
-  padding: 5.625em 2.250em;
+  // margin: 0 7.975em;
+  // padding: 5.625em 2.250em;
 }
 
 .certificates {
@@ -537,7 +538,11 @@ header {
 
 
 
-
+@media (max-width: 453px){
+  .nav-toggle {
+    position: fixed;
+  }
+}
 
 
 
@@ -558,7 +563,7 @@ header {
 // =========================================================================
 
 * {
-  box-sizing: border-box;
+  //box-sizing: border-box;
   // line-height: 1.5;
   font-family: 'Open Sans', sans-serif;
 }
