@@ -1,3 +1,10 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
 @font-face {
 	font-family: 'Collegia';
 	src: url('fonts/COLLEGIA.ttf');
@@ -6,12 +13,6 @@
 		local('Collegia'),
 		url('fonts/COLLEGIA.ttf')
 		format('truetype');
-}
-
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
 }
 
 
@@ -44,6 +45,7 @@ body {
           0.125em 0.125em 0.25em rgba(0,0,0,.15);
 }
 
+// make fonts bigger on larger font sizes
 @media (min-width: 800px) {
     :root {
         --fs-h1: 4.5rem;
@@ -70,7 +72,7 @@ html {
 
 
 section {
-    padding: 5em 2em;
+    padding: 4em 2em;
 }
 
 img {
@@ -114,9 +116,9 @@ h3 {
     margin: 0;
 }
 
-// h1:not([class^="card"]) { font-size: var(--fs-h1) }
-// h2:not([class^="card"]) { font-size: var(--fs-h2) }
-// h3:not([class^="card"])  { font-size: var(--fs-h3) }
+h1:not([class^="card"]) { font-size: var(--fs-h1) }
+h2:not([class^="card"]) { font-size: var(--fs-h2) }
+h3:not([class^="card"])  { font-size: var(--fs-h3) }
 
 
 .section__title {
@@ -243,6 +245,7 @@ header {
 .hamburger {
   display: block;
   position: relative;
+
 
 }
 
@@ -412,7 +415,7 @@ header {
 
   @media (max-width: 600px) {
     section {
-      min-width: 410px;
+     min-width: 410px;
     }
     .card {
       margin-left: 2em;
@@ -538,7 +541,7 @@ header {
 
 
 
-@media (max-width: 400px){
+@media (max-width: 480px){
   .card {
     border: .3em solid var(--clr-accent);
 
@@ -550,13 +553,9 @@ header {
     padding-top: 1em;
 
   }
-  .intro {
-    padding-left: .5em;
-    padding-right: .5em;
-  }
-
-  // .intro__img {
-  //   object-fit: cover;
+  // .intro {
+  //   padding-left: .5em;
+  //   padding-right: .5em;
   // }
   .about-me {
     padding-left: .5em;
@@ -585,15 +584,10 @@ header {
 
 // =========================================================================
 
-* {
-  //box-sizing: border-box;
-  // line-height: 1.5;
-  font-family: 'Open Sans', sans-serif;
-}
 
-img {
-  max-width: 100%;
-}
+// img {
+//   max-width: 100%;
+// }
 
 
 .services {
@@ -605,16 +599,16 @@ img {
 }
 .container {
 
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
+  // align-items: center;
+  // justify-content: center;
+  // height: 100vh;
 
 }
 
 .card {
   position: relative;
   background: #333;
-  width: 400px;
+  max-width: 400px;
   // height: 80vh;
   border-radius: 6px;
   padding: 2rem;

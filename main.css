@@ -1,14 +1,14 @@
-@font-face {
-  font-family: 'Collegia';
-  src: url("fonts/COLLEGIA.ttf");
-  src: local("COLLEGIA"), local("Collegia"), url("fonts/COLLEGIA.ttf") format("truetype");
-}
-
 *,
 *::before,
 *::after {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'Collegia';
+  src: url("fonts/COLLEGIA.ttf");
+  src: local("COLLEGIA"), local("Collegia"), url("fonts/COLLEGIA.ttf") format("truetype");
 }
 
 body {
@@ -59,7 +59,7 @@ html {
 }
 
 section {
-  padding: 5em 2em;
+  padding: 4em 2em;
 }
 
 img {
@@ -105,6 +105,18 @@ h2,
 h3 {
   line-height: 1;
   margin: 0;
+}
+
+h1:not([class^="card"]) {
+  font-size: var(--fs-h1);
+}
+
+h2:not([class^="card"]) {
+  font-size: var(--fs-h2);
+}
+
+h3:not([class^="card"]) {
+  font-size: var(--fs-h3);
 }
 
 .section__title {
@@ -529,7 +541,7 @@ header {
   padding: .5em;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 480px) {
   .card {
     border: 0.3em solid var(--clr-accent);
   }
@@ -539,22 +551,10 @@ header {
   .card__title {
     padding-top: 1em;
   }
-  .intro {
-    padding-left: .5em;
-    padding-right: .5em;
-  }
   .about-me {
     padding-left: .5em;
     padding-right: .5em;
   }
-}
-
-* {
-  font-family: 'Open Sans', sans-serif;
-}
-
-img {
-  max-width: 100%;
 }
 
 .services {
@@ -572,20 +572,10 @@ img {
           justify-content: space-evenly;
 }
 
-.container {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  height: 100vh;
-}
-
 .card {
   position: relative;
   background: #333;
-  width: 400px;
+  max-width: 400px;
   border-radius: 6px;
   padding: 2rem;
   color: #aaa;
