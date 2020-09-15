@@ -93,7 +93,7 @@ strong { font-weight: var(--fw-bold) }
     display: inline-block;
     padding: .5em 2.5em;
     background: var(--clr-accent);
-    color: var(--clr-dark);
+    color: var(--clr-light);
     text-decoration: none;
     cursor: pointer;
     font-size: .8rem;
@@ -320,12 +320,15 @@ header {
 /*  My services section  */
 
 .my-services {
-    background-color: var(--clr-dark);
-    background-image: url(img/tools-bg.jpg);
-    mix-blend-mode: multiply;
+  // background-color: #485461;
+  // background-image: linear-gradient(210deg,  #333 0%,  #474957 74%);
+  background-color: #485461;
+  background-image: linear-gradient(210deg, #6c76bf 0%, #333 74%);
     background-size: cover;
     color: var(--clr-light);
     text-align: center;
+    padding-left: .2em;
+
 }
 
 .section__title--services {
@@ -372,7 +375,8 @@ header {
 .about-me {
   max-width: 1000px;
   margin: 0 auto;
-  // text-align: center;
+  text-align: center;
+
 }
 
 .about-me__img {
@@ -418,8 +422,9 @@ header {
      min-width: 410px;
     }
     .card {
-      margin-left: 2em;
-      margin-right: 2em;
+      margin-left: 1em;
+      margin-right: 1em;
+
 
   }
 }
@@ -427,12 +432,17 @@ header {
 /* My Work */
 
 .my-work {
-  background-color: var(--clr-dark);
-  background-image: url(../img/tools-bg.jpg);
-  mix-blend-mode: multiply;
+  // background-color: var(--clr-dark);
+  // background-image: url(../img/tools-bg.jpg);
+  background-color: #485461;
+   background-image: linear-gradient(210deg, #6c76bf 0%, #333 74%);
   background-size: cover;
   color: var(--clr-light);
   text-align: center;
+  padding-top: 1.5em;
+  margin-bottom: .5em;
+  padding-left: .2em;
+
 }
 
 .portfolio {
@@ -444,6 +454,7 @@ header {
 .portfolio__item {
   background: transparent;
   overflow: hidden;
+  margin:.5em;
 
 }
 
@@ -461,11 +472,23 @@ header {
   text-align: center;
   // margin: 0 7.975em;
   // padding: 5.625em 2.250em;
+  padding: 4em 2em;
 }
 
 .certificates {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  padding-left:0em;
+   padding-right: 2em;
+
+}
+
+.my-certificates .section__title {
+  padding-right: 2em;
+}
+
+.section__subtitle--certificate {
+  padding-right: 2em;
 }
 
 .certificate__item {
@@ -474,16 +497,16 @@ header {
 }
 
 .certificate__img {
-  // display: block;
-  // height: 30vh;
+
   transition:
       transform 750ms cubic-bezier(.5, 0, .5, 1),
       opacity 250ms linear;
+
 }
 
-.certificate__img:hover {
-  transform: scale(2);
-}
+// .certificate__img:hover {
+//   transform: scale(2);
+// }
 
 
 
@@ -543,7 +566,7 @@ header {
 
 @media (max-width: 480px){
   .card {
-    border: .3em solid var(--clr-accent);
+    border: .1em solid var(--clr-accent);
 
   }
   .card__svg {
@@ -553,18 +576,22 @@ header {
     padding-top: 1em;
 
   }
-  // .intro {
-  //   padding-left: .5em;
-  //   padding-right: .5em;
-  // }
-  .about-me {
-    padding-left: .5em;
+  .intro {
+    min-width: 100%;
     padding-right: .5em;
+    padding-left: .5em;
+  }
+  .about-me {
+    // padding-left: .5em;
+    // padding-right: .5em;
+    min-width: 100%;
     // margin: 0 auto;
   }
 
 
+
 }
+
 
 
 
@@ -602,6 +629,7 @@ header {
   // align-items: center;
   // justify-content: center;
   // height: 100vh;
+  // margin: 0;
 
 }
 
@@ -609,7 +637,7 @@ header {
   position: relative;
   background: #333;
   max-width: 400px;
-  // height: 80vh;
+  // height: 70vh;
   border-radius: 6px;
   padding: 2rem;
   color: #aaa;
@@ -656,6 +684,9 @@ header {
   &__links{
     display: flex;
     justify-content: space-around;
+  }
+  & a {
+    color:#bbb;
   }
 }
 
