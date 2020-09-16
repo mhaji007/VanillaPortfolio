@@ -142,6 +142,9 @@ h3:not([class^="card"]) {
   padding: .25em 1em;
   font-family: var(--ff-secondary);
   margin-bottom: 1em;
+  font-weight: bolder;
+  font-size: 1.5rem;
+  color: white;
 }
 
 .section__subtitle--work {
@@ -345,7 +348,6 @@ header {
   background-size: cover;
   color: var(--clr-light);
   text-align: center;
-  padding-left: .2em;
 }
 
 .section__title--services {
@@ -388,6 +390,10 @@ header {
 .about-me__img {
   -webkit-box-shadow: var(--bs);
           box-shadow: var(--bs);
+}
+
+.about-me__body {
+  color: black;
 }
 
 @media (min-width: 600px) {
@@ -441,9 +447,7 @@ header {
   background-size: cover;
   color: var(--clr-light);
   text-align: center;
-  padding-top: 1.5em;
-  margin-bottom: .5em;
-  padding-left: .2em;
+  padding-top: 2.5em;
 }
 
 .portfolio {
@@ -472,7 +476,7 @@ header {
   background-color: var(--clr-light);
   color: var(--clr-dark);
   text-align: center;
-  padding: 4em 2em;
+  padding: 4em 2em 1.5em;
 }
 
 .certificates {
@@ -481,11 +485,14 @@ header {
   -ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   padding-left: 0em;
-  padding-right: 2em;
 }
 
-.my-certificates .section__title {
-  padding-right: 2em;
+.certificates :first-child {
+  height: 17.775rem;
+}
+
+.certificates :first-child + img {
+  height: 17.775rem;
 }
 
 .section__subtitle--certificate {
@@ -505,11 +512,15 @@ header {
 }
 
 /* footer */
+.footer-section {
+  padding: 0;
+}
+
 .footer {
   background: var(--clr-light);
   color: var(--clr-accent);
   text-align: center;
-  padding: 2.5em 0;
+  padding: 1em 0;
   font-size: var(--fs-h3);
 }
 
@@ -544,7 +555,7 @@ header {
 }
 
 .social-list__item {
-  margin: 0 .5em;
+  margin: 0 .1em;
 }
 
 .social-list__link {
@@ -562,11 +573,6 @@ header {
     padding-top: 1em;
   }
   .intro {
-    min-width: 100%;
-    padding-right: .5em;
-    padding-left: .5em;
-  }
-  .about-me {
     min-width: 100%;
   }
 }

@@ -144,6 +144,9 @@ h3:not([class^="card"])  { font-size: var(--fs-h3) }
     padding: .25em 1em;
     font-family: var(--ff-secondary);
     margin-bottom: 1em;
+    font-weight: bolder;
+    font-size: 1.5rem;
+    color: white;
 }
 
 .section__subtitle--work {
@@ -327,7 +330,7 @@ header {
     background-size: cover;
     color: var(--clr-light);
     text-align: center;
-    padding-left: .2em;
+    //padding-left: .2em;
 
 }
 
@@ -381,6 +384,10 @@ header {
 
 .about-me__img {
   box-shadow: var(--bs);
+}
+
+.about-me__body {
+  color: black;
 }
 
 @media (min-width: 600px) {
@@ -439,9 +446,9 @@ header {
   background-size: cover;
   color: var(--clr-light);
   text-align: center;
-  padding-top: 1.5em;
-  margin-bottom: .5em;
-  padding-left: .2em;
+  padding-top: 2.5em;
+  // margin-bottom: .5em;
+  // padding-left: .2em;
 
 }
 
@@ -472,19 +479,26 @@ header {
   text-align: center;
   // margin: 0 7.975em;
   // padding: 5.625em 2.250em;
-  padding: 4em 2em;
+  padding: 4em 2em 1.5em;
 }
 
 .certificates {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   padding-left:0em;
-   padding-right: 2em;
+  //  padding-right: 2em;
 
 }
 
+.certificates :first-child {
+  height: 17.775rem;
+}
+.certificates :first-child + img {
+  height: 17.775rem;
+}
+
 .my-certificates .section__title {
-  padding-right: 2em;
+  // padding-right: 2rem;
 }
 
 .section__subtitle--certificate {
@@ -518,12 +532,19 @@ header {
 
 /* footer */
 
+.footer-section {
+  padding:0
+}
+
+
+
 .footer {
   background:var(--clr-light);
   color: var(--clr-accent);
   text-align: center;
-  padding: 2.5em 0;
+  padding: 1em 0;
   font-size: var(--fs-h3);
+
 
 }
 
@@ -554,7 +575,7 @@ header {
 }
 
 .social-list__item {
-  margin: 0 .5em;
+  margin: 0 .1em;
 }
 
 .social-list__link {
@@ -578,19 +599,27 @@ header {
   }
   .intro {
     min-width: 100%;
-    padding-right: .5em;
-    padding-left: .5em;
-  }
-  .about-me {
-    // padding-left: .5em;
     // padding-right: .5em;
-    min-width: 100%;
-    // margin: 0 auto;
+    // padding-left: .5em;
   }
+  // .about-me {
+  //   // padding-left: .5em;
+  //   // padding-right: .5em;
+  //   //min-width: 100%;
+  //   // margin: 0 auto;
+  // }
 
 
 
 }
+
+// @media (max-width:1244px){
+
+//   .card {
+//     padding-left: 1rem;
+//     padding-right: 1rem;
+//   }
+// }
 
 
 
@@ -688,6 +717,10 @@ header {
   & a {
     color:#bbb;
   }
+}
+
+.my-services > p:last-of-type {
+
 }
 
 
