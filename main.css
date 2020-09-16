@@ -349,8 +349,8 @@ header {
   background-size: cover;
   color: var(--clr-light);
   text-align: center;
-  padding-left: .3em;
-  padding-right: .3em;
+  padding-left: .5em;
+  padding-right: .5em;
 }
 
 .section__title--services {
@@ -565,7 +565,7 @@ header {
   padding: .25em;
 }
 
-@media (max-width: 590px) {
+@media (max-width: 667px) {
   .card {
     border: 0.1em solid var(--clr-accent);
     margin-bottom: .7em;
