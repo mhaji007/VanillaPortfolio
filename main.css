@@ -565,7 +565,7 @@ header {
   padding: .25em;
 }
 
-@media (max-width: 667px) {
+@media (max-width: 590px) {
   .card {
     border: 0.1em solid var(--clr-accent);
     margin-bottom: .7em;
