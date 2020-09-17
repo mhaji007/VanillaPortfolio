@@ -496,11 +496,11 @@ header {
 }
 
 .certificates :first-child {
-  height: 17.775rem;
+  height: 14.019rem;
 }
 
 .certificates :first-child + img {
-  height: 17.775rem;
+  height: 14.019rem;
 }
 
 .section__subtitle--certificate {
@@ -558,7 +558,7 @@ header {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin: 2em 0 0;
+  margin: .9em 0;
   padding: 0;
 }
 
